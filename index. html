@@ -1,0 +1,239 @@
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176b4d">
+  <title>Mural Comunitario</title>
+
+  <style>
+    :root {
+      --verde: #176b4d;
+      --rojo: #c84135;
+      --amarillo: #f4c542;
+      --crema: #fff8e8;
+      --texto: #26352d;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--texto);
+      background: var(--crema);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #fff;
+      border-bottom: 4px solid var(--amarillo);
+    }
+
+    .logo {
+      color: var(--verde);
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    nav a {
+      color: var(--texto);
+      text-decoration: none;
+      margin-left: 16px;
+      font-weight: bold;
+    }
+
+    .hero {
+      min-height: 70vh;
+      padding: 60px 7%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      background: linear-gradient(135deg, #fff8e8, #f4dfbd);
+    }
+
+    .etiqueta {
+      color: var(--rojo);
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0;
+      color: var(--verde);
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 0.98;
+    }
+
+    .hero p {
+      max-width: 580px;
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 14px 22px;
+      color: white;
+      background: var(--rojo);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .arte {
+      min-height: 300px;
+      padding: 25px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: white;
+      border: 9px solid white;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px #46351d30;
+      background:
+        radial-gradient(circle at 25% 25%, #f4c542 0 10%, transparent 11%),
+        radial-gradient(circle at 75% 35%, #c84135 0 13%, transparent 14%),
+        radial-gradient(circle at 45% 75%, #176b4d 0 18%, transparent 19%),
+        linear-gradient(135deg, #176b4d, #168b83 55%, #e78d42);
+    }
+
+    .arte span {
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      font-weight: 900;
+      text-shadow: 2px 3px 5px #0008;
+    }
+
+    section { padding: 55px 7%; }
+
+    section h2 {
+      color: var(--verde);
+      font-size: 2rem;
+    }
+
+    .contenido {
+      max-width: 800px;
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #eadfc9;
+    }
+
+    .nota-fotos {
+      color: #59665e;
+      font-size: 0.95rem;
+    }
+
+    .franja {
+      padding: 25px 7%;
+      color: white;
+      background: var(--verde);
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 22px;
+      color: #657168;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; padding-top: 45px; }
+      .arte { min-height: 230px; }
+      nav a { margin-left: 0; margin-right: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">🎨 Mural Comunitario</div>
+    <nav>
+      <a href="#proyecto">El proyecto</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#proposito">Propósito</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <div class="etiqueta">Arte que une a la comunidad</div>
+        <h1>Mural<br>Comunitario</h1>
+        <p>Un espacio renovado con color, creatividad y orgullo por nuestra historia local.</p>
+        <a class="boton" href="#proyecto">Conoce el proyecto</a>
+      </div>
+
+      <div class="arte" role="img" aria-label="Diseño colorido inspirado en un mural">
+        <span>Colores que cuentan<br>nuestra historia</span>
+      </div>
+    </div>
+
+    <section id="proyecto">
+      <h2>El proyecto</h2>
+      <p class="contenido">
+        El trabajo elegido es el Mural Comunitario. Se realizará un mural en un
+        lugar deteriorado del municipio y se pintará para promover valores y
+        compartir la historia local.
+      </p>
+    </section>
+
+    <div class="franja">
+      Nuestra historia • Nuestros valores • Nuestra comunidad
+    </div>
+
+    <section id="fotos">
+      <h2>Fotos del mural</h2>
+      <p class="nota-fotos">
+        Puedes agregar tus imágenes al repositorio y cambiar estos nombres por
+        los nombres exactos de tus archivos.
+      </p>
+
+      <div class="galeria">
+        <img src="fotos/mural1.jpg" alt="Mural comunitario">
+        <img src="fotos/mural2.jpg" alt="Detalle de los colores del mural">
+        <img src="fotos/mural3.jpg" alt="Personas participando en el mural">
+      </div>
+    </section>
+
+    <section id="proposito">
+      <h2>Un lugar para expresarnos</h2>
+      <p class="contenido">
+        Con la participación de la comunidad, transformaremos un espacio y lo
+        llenaremos de vida. Cada color y cada imagen ayudará a contar quiénes
+        somos y qué nos une.
+      </p>
+    </section>
+  </main>
+
+  <footer>Hecho con orgullo y espíritu comunitario 🇲🇽</footer>
+</body>
+</html>
+```
+
